@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">AOE2assistant</string>
+
+    //-- match up select screen -->
+    <string name="nextGame">PROCHAIN JEU</string>
+    <string name="myCivChoice">Sélectionnez votre civilisation</string>
+    <string name="oppCivChoice">Sélectionnez la civilisation de l\'adversaire</string>
+    <string name="mapMatchUp">Sélectionnez la carte</string>
+    <string name="startMatch">Commencer l\'affrontement</string>
+    <string name="pickMatch">Choisir l\'affrontement</string>
+
+    //-- top bar titles -->
+    <string name="matchUpTitle">Affrontement</string>
+    <string name="userSettingsTitle">Paramètres</string>
+    <string name="civilizationsTitle">Civilisations</string>
+    <string name="technologyTreeTitle">Arbre des technologies</string>
+    <string name="matchUpInfoTitle">Affrontement</string>
+
+    //-- category list -->
+    <string name="generalNote">Notes générales</string>
+    <string name="note">Notes</string>
+    <string name="military">Militaire</string>
+    <string name="economy">Économie</string>
+    <string name="uniqueTechs">Technologies uniques</string>
+    <string name="uniqueUnits">Unités uniques</string>
+
+    //-- settings screen -->
+    <string name="languageSettings">Sélectionner la langue</string>
+    <string name="speakSettings">Assistant vocal</string>
+    <string name="topElementText">Catégorie la plus à gauche</string>
+    <string name="bottomElementText">Catégorie la plus à droite</string>
+
+    //-- Civ List Screen -->
+    <string name="civChoiceCivList">Sélectionner civilisation</string>
+    <string name="generalOption">Général</string>
+    <string name="allCivsCiv">Toutes les civs</string>
+    <string name="playingwith">Jouer avec eux</string>
+    <string name="playingagainst">Jouer contre eux avec </string>
+    <string name="edit">Éditer</string>
+    <string name="save">Sauvegarder</string>
+    <string name="cancel">Annuler</string>
+
+    //-- voice assistant settings -->
+    <string name="voice">Voix</string>
+    <string name="testSpeech">Bonjour, je serai votre assistant vocal.</string>
+    <string name="TtsSpeed">Vitesse de la voix</string>
+
+    //-- voice assistant playback options -->
+    <string name="ONCLICK">Au clic</string>
+    <string name="ONBENEFITCHANGE">Au glissement</string>
+    <string name="ONBOTH">Au clic ou au glissement</string>
+    <string name="NEVER">Jamais</string>
+
+    //-- voice assistant explanations -->
+    <string name="ONCLICKexplanation">La voix est reproduite en cliquant sur les noms des civilisations.</string>
+    <string name="ONBENEFITCHANGEexplanation">La voix est reproduite après avoir modifié les avantages, les noms de votre civilisation et de celle de l\'adversaire sont lus.</string>
+    <string name="ONBOTHexplanation">La voix est reproduite soit après modification des avantages (les noms des deux civilisations sont lus), soit en cliquant sur le nom de la civilisation (seul le texte de cette civilisation est lu).</string>
+    <string name="NEVERexplanation">Aucune voix n\'est reproduite</string>
+
+    //-- Export Import general -->
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="cancelExportImport">Annuler</string>
+    <string name="noNotesLoaded">Aucune note n\'a été chargée</string>
+    <string name="deletenote">Supprimer</string>
+
+    //-- Export notes -->
+    <string name="exportNotesLabel">Enregistrer mes notes dans un fichier</string>
+    <string name="exportNotesTitle">Enregistrer les notes</string>
+    <string name="selectDocExport">Sélectionner ou créer un fichier</string>
+    <string name="notesname">Nom des notes</string>
+    <string name="exportnotes">Sauvegarder</string>
+
+    //-- Import notes -->
+    <string name="importNotesLabel">Charger des notes à partir d\'un fichier</string>
+    <string name="importNotesTitle">Charger les notes</string>
+    <string name="selectDocImport">Sélectionner le fichier de notes</string>
+    <string name="importnotes">Importer</string>
+</resources>

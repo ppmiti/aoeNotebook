@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">AOE2assistant</string>
+
+    <!-- match up select screen -->
+    <string name="nextGame">PARTITA SUCCESSIVA</string>
+    <string name="myCivChoice">La tua civiltà</string>
+    <string name="oppCivChoice">Civiltà avversaria</string>
+    <string name="mapMatchUp">Seleziona mappa</string>
+    <string name="startMatch">Inizia confronto</string>
+    <string name="pickMatch">Scegli confronto</string>
+
+    <!-- top bar titles -->
+    <string name="matchUpTitle">Confronto</string>
+    <string name="userSettingsTitle">Impostazioni</string>
+    <string name="civilizationsTitle">Civiltà</string>
+    <string name="technologyTreeTitle">Albero delle tecnologie</string>
+    <string name="matchUpInfoTitle">Confronto</string>
+
+    <!-- category list -->
+    <string name="generalNote">Note generali</string>
+    <string name="note">Note</string>
+    <string name="military">Militare</string>
+    <string name="economy">Economia</string>
+    <string name="uniqueTechs">Tecnologie uniche</string>
+    <string name="uniqueUnits">Unità uniche</string>
+
+    <!-- settings screen -->
+    <string name="languageSettings">Seleziona lingua</string>
+    <string name="speakSettings">Assistente vocale</string>
+    <string name="topElementText">Cat più a sinistra</string>
+    <string name="bottomElementText">Cat più a destra</string>
+
+    <!-- Civ List Screen -->
+    <string name="civChoiceCivList">Seleziona civiltà</string>
+    <string name="generalOption">Generale</string>
+    <string name="allCivsCiv">Qualsiasi civ</string>
+    <string name="playingwith">Giocando con loro</string>
+    <string name="playingagainst">Giocando contro di loro come </string>
+    <string name="edit">Modifica</string>
+    <string name="save">Salva</string>
+    <string name="cancel">Annulla</string>
+
+    <!-- voice assistant settings -->
+    <string name="voice">Voce</string>
+    <string name="testSpeech">Ciao, sarò il tuo assistente vocale.</string>
+    <string name="TtsSpeed">Velocità della voce</string>
+
+    <!-- voice assistant playback options -->
+    <string name="ONCLICK">Al clic</string>
+    <string name="ONBENEFITCHANGE">Allo scorrimento</string>
+    <string name="ONBOTH">Al clic o allo scorrimento</string>
+    <string name="NEVER">Mai</string>
+
+    <!-- voice assistant explanations -->
+    <string name="ONCLICKexplanation">La voce viene riprodotta cliccando sui nomi delle civiltà.</string>
+    <string name="ONBENEFITCHANGEexplanation">La voce viene riprodotta dopo aver cambiato i vantaggi, e sia la tua civiltà sia quella avversaria vengono letti.</string>
+    <string name="ONBOTHexplanation">La voce viene riprodotta sia dopo aver cambiato i vantaggi (in cui caso vengono lette entrambe le civiltà) sia cliccando sul nome della civiltà (in cui caso viene letta solo quella selezionata).</string>
+    <string name="NEVERexplanation">Nessuna voce viene riprodotta</string>
+
+    <!-- Export Import general -->
+    <string name="username">Nome utente</string>
+    <string name="password">Password</string>
+    <string name="cancelExportImport">Annulla</string>
+    <string name="noNotesLoaded">Nessuna nota è stata caricata</string>
+    <string name="deletenote">Elimina</string>
+
+    <!-- Export notes -->
+    <string name="exportNotesLabel">Salva le mie note in un file</string>
+    <string name="exportNotesTitle">Salva note</string>
+    <string name="selectDocExport">Seleziona o crea un file</string>
+    <string name="notesname">Nome delle note</string>
+    <string name="exportnotes">Salva</string>
+
+    <!-- Import notes -->
+    <string name="importNotesLabel">Carica note da un file</string>
+    <string name="importNotesTitle">Carica note</string>
+    <string name="selectDocImport">Seleziona file delle note</string>
+    <string name="importnotes">Importa</string>
+</resources>

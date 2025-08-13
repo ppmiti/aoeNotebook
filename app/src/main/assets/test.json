@@ -1,0 +1,11 @@
+{
+  "civ_id": 1,
+  "name": "Britons",
+  "type": "Foot Archer",
+  "icon": "",
+  "economy": "Town Centers cost -50% wood starting in the Castle Age;Shepherds work 25% faster",
+  "military": " Foot archers (except skirmishers) +1 range in Castle and Imperial Age (+2 total)",
+  "unique_techs": "Yeomen (+1 foot archer range; +2 tower attack);Warwolf (Trebuchets do blast damage)",
+  "unique_units": "Longbowman (archer)",
+  "team_bonus": "Archery Ranges work 10% faster"
+}

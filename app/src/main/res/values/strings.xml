@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">RTS assistant</string>
+
+    // match up select screen
+    <string name="nextGame">NEXT GAME</string>
+    <string name="myCivChoice">Select your civ</string>
+    <string name="oppCivChoice">Select opponent civ</string>
+    <string name="mapMatchUp">Select Map</string>
+    <string name="startMatch">Start match-up</string>
+    <string name="pickMatch">Pick match-up</string>
+
+    // top bar titles
+    <string name="matchUpTitle">Match-up</string>
+    <string name="userSettingsTitle">Settings</string>
+    <string name="civilizationsTitle">Civilizations</string>
+    <string name="technologyTreeTitle">Technology Tree</string>
+    <string name="matchUpInfoTitle">Match-up</string>
+
+    //category list
+    <string name="generalNote">General notes</string>
+    <string name="note">Notes</string>
+    <string name="military">Military</string>
+    <string name="economy">Economy</string>
+    <string name="uniqueTechs">Unique techs</string>
+    <string name="uniqueUnits">Unique units</string>
+
+    // settings screen
+    <string name="languageSettings">Select language</string>
+    <string name="speakSettings">Voice assistant</string>
+    <string name="topElementText">Left-most category</string>
+    <string name="bottomElementText">Right-most category</string>
+
+    // Civ List Screen
+    <string name="civChoiceCivList">Select Civ</string>
+    <string name="generalOption">General</string>
+    <string name="allCivsCiv">any civs</string>
+    <string name="playingwith">playing with them</string>
+    <string name="playingagainst">playing against them as</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    // voice assistant settings
+    <string name="voice">Voice</string>
+    <string name="testSpeech">Hello, I will be your voice assistant.</string>
+    <string name="TtsSpeed">Voice speed</string>
+
+    // voice assistant playback options
+    <string name="ONCLICK">On click</string>
+    <string name="ONBENEFITCHANGE">On swipe</string>
+    <string name="ONBOTH">On click or swipe</string>
+    <string name="NEVER">Never</string>
+
+    // voice assistant explanations
+    <string name="ONCLICKexplanation">Voice is reproduced on clicking on the civ names.</string>
+    <string name="ONBENEFITCHANGEexplanation">Voice is reproduced after changing benefit, both your civ and the opponent ones are read.</string>
+    <string name="ONBOTHexplanation">Voice is reproduced either after changing benefit, in which case both your civ and the opponent ones are read, or by clicking on the civ name, in which case only that civ text is read.</string>
+    <string name="NEVERexplanation">No voice is reproduced</string>
+
+    //Export Import general
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="cancelExportImport">Cancel</string>
+    <string name="noNotesLoaded">No notes have been loaded</string>
+    <string name="deletenote">Delete</string>
+
+
+    // Export notes
+    <string name="exportNotesLabel">Saves my notes into file</string>
+    <string name="exportNotesTitle">Save notes</string>
+    <string name="selectDocExport">Select or create file</string>
+    <string name="notesname">Notes\' name</string>
+    <string name="exportnotes">Save</string>
+
+    // Import notes
+    <string name="importNotesLabel">Load notes from file</string>
+    <string name="importNotesTitle">Load notes</string>
+    <string name="selectDocImport">Select notes file</string>
+    <string name="importnotes">Import</string>
+</resources>

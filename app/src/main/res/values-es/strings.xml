@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AOE2assistant</string>
+
+    // match up select screen
+    <string name="nextGame">Próxima partida</string>
+    <string name="myCivChoice">Mi civilización</string>
+    <string name="oppCivChoice">Civilización oponente</string>
+    <string name="mapMatchUp">Elegir mapa</string>
+    <string name="startMatch">Empezar partida</string>.
+    <string name="pickMatch">Prepará la partida</string>
+
+    // top bar titles
+    <string name="matchUpTitle">Enfrentamiento</string>
+    <string name="userSettingsTitle">Ajustes</string>
+    <string name="civilizationsTitle">Civilizaciones</string>
+    <string name="technologyTreeTitle">Árbol de tecnologías</string>
+    <string name="matchUpInfoTitle">Enfrentamiento</string>
+
+    //category list
+    <string name="generalNote">Notas generales</string>
+    <string name="note">Notas por oponente</string>
+    <string name="military">Militares</string>
+    <string name="economy">Económicas</string>
+    <string name="uniqueTechs">Tecnologías únicas</string>
+    <string name="uniqueUnits">Unidades únicas</string>
+
+    // settings screen
+    <string name="languageSettings">Elegir lengua</string>
+    <string name="speakSettings">Asistente de voz</string>
+    <string name="topElementText">Primera categoría</string>
+    <string name="bottomElementText">Ultima categoría</string>
+
+    // Civ List Screen
+    <string name="civChoiceCivList">Elegir la civilización</string>
+    <string name="generalOption">General</string>
+    <string name="allCivsCiv">Cualquier civ</string>
+    <string name="playingwith">Jugando con ellos</string>
+    <string name="playingagainst">Jugando contra ellos como </string>
+    <string name="edit">Editar</string>
+    <string name="save">Guardar</string>
+    <string name="cancel">Cancelar</string>
+
+    // voice assistant settings
+    <string name="voice">Voz</string>
+    <string name="testSpeech">Hola, yo voy a ser tu asistente de voz</string>
+    <string name="TtsSpeed">Velocidad del habla</string>
+
+    // voice assistant playback options
+    <string name="ONCLICK">Al tocar</string>
+    <string name="ONBENEFITCHANGE">Al cambiar</string>
+    <string name="ONBOTH">Al tocar o cambiar</string>
+    <string name="NEVER">Nunca</string>
+
+    // voice assistant explanations
+    <string name="ONCLICKexplanation">Al tocar sobre el nombre de una civ, sea la tuya o la del oponente, el texto se lee en voz alta</string>
+    <string name="ONBENEFITCHANGEexplanation">Al cambiar de beneficio, el texto para ambas civilizaciones se lee en voz alta</string>
+    <string name="ONBOTHexplanation">Ya sea al cambiar de beneficio, entonces el texto de ambas civis se lee, o al tocal sobre el nombre de una de ellas, encontes solo el texto de ésta se lee</string>
+    <string name="NEVERexplanation">La lectura de texto en voz alta está desactivada</string>
+
+    // Export Import general -->
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="cancelExportImport">Cancelar</string>
+    <string name="noNotesLoaded">No se han cargado notas</string>
+    <string name="deletenote">Eliminar</string>
+
+    //-- Export notes -->
+    <string name="exportNotesLabel">Guardar notas en archivo</string>
+    <string name="exportNotesTitle">Guardar notas</string>
+    <string name="selectDocExport">Seleccionar o crear archivo</string>
+    <string name="notesname">Nombre de las notas</string>
+    <string name="exportnotes">Guardar</string>
+
+    //-- Import notes -->
+    <string name="importNotesLabel">Cargar notas desde archivo</string>
+    <string name="importNotesTitle">Cargar notas</string>
+    <string name="selectDocImport">Seleccionar archivo de notas</string>
+    <string name="importnotes">Importar</string>
+</resources>
