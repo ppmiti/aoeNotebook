@@ -2,7 +2,10 @@ package com.example.aoe2assistant.domain
 
 import android.content.Context
 import android.net.Uri
+import android.os.Build
+import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.example.aoe2assistant.data.CivData
 import com.example.aoe2assistant.data.CivInfo
 import com.example.aoe2assistant.data.NotesData
@@ -23,6 +26,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.security.MessageDigest
+import java.util.Base64
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
 
@@ -159,8 +163,11 @@ class JsonOrchestrator {
     // ---------------------------------------------------------------------------------------
 
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun readJsonData(uri: Uri, username: String, password: String): JsonObject? {
         val key = generateKey(username, password)
+        val rawkey = Base64.getEncoder().encodeToString(key.encoded);
+        Log.d("ReadJson", "generated key for $username and $password is $rawkey")
 
         val jsonString: String
 
@@ -177,6 +184,7 @@ class JsonOrchestrator {
             }
         } catch (e: Exception) {
             // Handle errors, such as file not found or read errors
+            Log.e("ReadJson", "${e.printStackTrace()}")
             e.printStackTrace()
             null
         }

@@ -2,6 +2,9 @@ package com.example.aoe2assistant.domain
 
 import android.content.Context
 import android.net.Uri
+import android.os.Build
+import android.util.Log
+import androidx.annotation.RequiresApi
 import com.example.aoe2assistant.ERROR_NOTES_LOADING_VERSION
 import com.example.aoe2assistant.data.NotesData
 import com.example.aoe2assistant.data.TextOfNotes
@@ -24,18 +27,26 @@ data class NotesManager(
         _context = input
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun loadNotesFromStorage(): MutableList<String> {
         val output = mutableListOf<String>()
         val files = _context.filesDir.listFiles()
+        if (files != null) {
+            Log.d("ExternalNotes", "there are ${files.size} files to be loaded : ${files.joinToString { "; " }}")
+        }
         files?.filter { it.name.endsWith(".txt") }?.forEach { file ->
-            val parts = file.name.split("_")
-            if (parts.size == 4) {
-                val noteName = parts[2]
-                val noteCreator = parts[3]
+            Log.d("ExternalNotes", "loading file ${file}")
+            val parts = getNoteRawId(file.name).split("_")
+            if (parts.size == 2) {
+                val noteName = parts[0]
+                val noteCreator = parts[1]
                 val password = noteName + noteCreator
+
+                Log.d("NotesLoadingSaving", "loading ${file} : note name is $noteName and note creator is $noteCreator")
+
                 val uri = Uri.fromFile(file)
                 val jsonData = _jsonOrch.readJsonData(uri, noteCreator, password)
-
+                Log.d("ExternalNotes", "adding ${file} to list of external notes")
                 output.add(addNotes(jsonData))
             }
         }
@@ -50,8 +61,10 @@ data class NotesManager(
                 val noteName = parts[1]
                 val noteCreator = parts[2]
                 val password = noteName + noteCreator
-                val fileName = "external_note_${noteName}_${noteCreator}.txt"
-                val file = File(_context.filesDir, fileName)
+
+                Log.d("NotesLoadingSaving", "saving ${getNoteFileName(noteName,noteCreator)} : note name is $noteName and note creator is $noteCreator")
+
+                val file = File(_context.filesDir, getNoteFileName(noteName,noteCreator))
                 val uri = Uri.fromFile(file)
                 _jsonOrch.exportJsonData(uri, noteCreator, noteName, password, value)
             }
@@ -60,6 +73,14 @@ data class NotesManager(
 
     private fun getNoteId(noteId: String): String {
         return "ext_$noteId"
+    }
+
+    private fun getNoteFileName(noteName: String, noteCreator: String): String {
+        return "external_note_${noteName}_${noteCreator}.txt"
+    }
+
+    private fun getNoteRawId(noteId: String): String {
+        return noteId.replace("external_note_","").replace(".txt","")
     }
 
     private fun addNotes(noteId: String, newNotes: NotesData): String {
@@ -74,6 +95,7 @@ data class NotesManager(
 
     fun addNotes(jsonNotes: JsonObject?): String {
         if (jsonNotes == null) {
+            Log.w("ExternalNotes", "input json for some notes is null")
             return ""
         }
         if (jsonNotes.containsKey("username") && jsonNotes.containsKey("version") && jsonNotes.containsKey("notesName") && jsonNotes.containsKey("data")) {
@@ -86,13 +108,17 @@ data class NotesManager(
                 .trim('"')
             val notes = Json.decodeFromString<NotesData>(rawNotes)
             return if (notes.isEmpty()) {
+                Log.w("ExternalNotes", "notes are empty for $notesName")
                 ""
             } else if (noteVersionMatching(versionLoadedNotes)) {
+                Log.w("ExternalNotes", "wrong version for $notesName")
                 ERROR_NOTES_LOADING_VERSION
             } else {
+                Log.d("ExternalNotes", "$notesName could be decoded, adding it to list")
                 addNotes(noteId, notes)
             }
         }
+        Log.w("ExternalNotes", "json does not contain all the necessary keys")
         return ""
     }
 
