@@ -38,6 +38,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.aoe2assistant.DEFAULT_LANGUAGE
 import com.example.aoe2assistant.LocalOrchestrator
 import com.example.aoe2assistant.LocalVoice
 import com.example.aoe2assistant.R
@@ -63,7 +64,8 @@ fun MatchUpInformationScreen(notesData: NotesData,
 
     val Orch = LocalOrchestrator.current
     val categoriesIndexes = Orch.getCategoriesIds()
-    val langChosen = Orch.getLangChosen()
+    //val langChosen = Orch.getLangChosen()
+    val langChosen = DEFAULT_LANGUAGE;
 
     val categoriesList = Orch.categoriesList().toList()
 

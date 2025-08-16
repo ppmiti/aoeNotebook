@@ -1,5 +1,6 @@
 package com.example.aoe2assistant.data
 
+import com.example.aoe2assistant.DEFAULT_LANGUAGE
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -102,17 +103,17 @@ data class CivNoteInfo(
     }
 
     fun getNotes(opp: String, lang: String) : TextOfNotes?{
-        return notes[opp]?.get(lang)
+        return notes[opp]?.get(DEFAULT_LANGUAGE)
     }
 
     fun writeNote(opp: String, lang: String, value: TextOfNotes){
         if (notes.containsKey(opp)){
             val tempMap = notes[opp]!!
-            tempMap[lang] = value
+            tempMap[DEFAULT_LANGUAGE] = value
             notes[opp] = tempMap
         }
         else {
-            val tempMap = mutableMapOf<String, TextOfNotes>(Pair(lang,value))
+            val tempMap = mutableMapOf<String, TextOfNotes>(Pair(DEFAULT_LANGUAGE,value))
             notes[opp] = tempMap
         }
     }

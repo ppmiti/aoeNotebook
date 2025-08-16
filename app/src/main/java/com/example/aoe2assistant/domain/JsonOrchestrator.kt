@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.aoe2assistant.data.CivData
 import com.example.aoe2assistant.data.CivInfo
+import com.example.aoe2assistant.data.GRAL_CIV
 import com.example.aoe2assistant.data.NotesData
 import com.example.aoe2assistant.data.RawCivInfo
 import com.example.aoe2assistant.data.SettingsClass
@@ -336,6 +337,9 @@ class JsonOrchestrator {
 
     private fun fromRawToListCiv(rawInfo: List<RawCivInfo>, civData: CivData, lang: String){
         val rawFields = civData.getRawFields()
+
+        val gralCiv = CivInfo(-1,GRAL_CIV,GRAL_CIV,"")
+        civData.addCiv(lang,GRAL_CIV,gralCiv)
 
         for (civ in rawInfo){
             val iciv = CivInfo(civ.civ_id,civ.name,civ.type,civ.icon)

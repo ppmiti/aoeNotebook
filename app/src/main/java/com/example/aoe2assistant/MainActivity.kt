@@ -1,9 +1,11 @@
 package com.example.aoe2assistant
 
+import android.os.Build
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.LocalTextStyle
@@ -28,20 +30,22 @@ import com.example.aoe2assistant.domain.MultilevelAcessOrchestrator
 import com.example.aoe2assistant.domain.NotesManager
 import com.example.aoe2assistant.domain.VoiceClass
 import com.example.aoe2assistant.domain.readFromJson
-import com.example.aoe2assistant.domain.recoverJsonData
 import com.example.aoe2assistant.presentation.OuterFrame
 import com.example.aoe2assistant.presentation.debugItems.DebugItems
 import com.example.aoe2assistant.ui.theme.AOE2assistantTheme
 import java.util.Locale
 
 val LocalVoice = compositionLocalOf { VoiceClass() }
+@RequiresApi(Build.VERSION_CODES.O)
 val LocalOrchestrator = compositionLocalOf { MultilevelAcessOrchestrator(JsonOrchestrator(), NotesManager(hashMapOf()), SettingsClass("", listOf(""),WhenToSpeak.ONCLICK,1f,""), ResourcesClass(), CivData(), IconsData()) }
 val LocalDebugItems = compositionLocalOf { DebugItems(false) }
 val ERROR_NOTES_LOADING_VERSION: String = "ERROR_NOTES_LOADING_VERSION"
+val DEFAULT_LANGUAGE: String = "DEFAULT_LANGUAGE"
 
 class MainActivity : ComponentActivity() {
 
     private lateinit var textToSpeech: TextToSpeech
+    @RequiresApi(Build.VERSION_CODES.O)
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,10 +108,9 @@ class MainActivity : ComponentActivity() {
 
                     // loading data into CivData class
                     civData.setRawFields(settings.benefitsList)
-                    dataStatus = recoverJsonData(civData,langList)
+                    dataStatus = jsonOrch.recoverJsonData(civData,langList)
 
                     val icons = IconsData(LocalContext.current.resources, civData.getCivs("en"))
-
 
                     // local debug items orch
                     val debugItems = DebugItems(false)

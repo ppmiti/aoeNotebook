@@ -1,5 +1,7 @@
 package com.example.aoe2assistant.data
 
+val GRAL_CIV = "General"
+
 class CivData{
     private var data = hashMapOf<String,HashMap<String,CivInfo>>() // 1st level keys are en, it, es, etc... 2nd level keys are the civ names
     private var keymaptemp = hashMapOf<String,Int>()

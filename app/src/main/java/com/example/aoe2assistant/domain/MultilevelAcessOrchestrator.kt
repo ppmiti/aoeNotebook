@@ -1,7 +1,9 @@
 package com.example.aoe2assistant.domain
 
 import android.content.Context
+import android.os.Build
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Home
@@ -10,6 +12,7 @@ import androidx.compose.material.icons.filled.Person
 import com.example.aoe2assistant.ERROR_NOTES_LOADING_VERSION
 import com.example.aoe2assistant.R
 import com.example.aoe2assistant.data.CivData
+import com.example.aoe2assistant.data.GRAL_CIV
 import com.example.aoe2assistant.data.IconsData
 import com.example.aoe2assistant.data.NotesData
 import com.example.aoe2assistant.data.ResourcesClass
@@ -18,6 +21,7 @@ import com.example.aoe2assistant.data.WhenToSpeak
 import com.example.aoe2assistant.presentation.ScreenLinks
 import kotlinx.serialization.json.JsonObject
 
+@RequiresApi(Build.VERSION_CODES.O)
 data class MultilevelAcessOrchestrator (val json : JsonOrchestrator,
                                         val extNotes: NotesManager,
                                         val settings: SettingsClass,
@@ -205,11 +209,18 @@ data class MultilevelAcessOrchestrator (val json : JsonOrchestrator,
     }
 
     fun getCivKey(civ: String): String {
-        return civData.getKeyFromCiv(civ)
+        return if (civ == resources.recoverText(R.string.generalOption))
+        {
+            GRAL_CIV
+        }
+        else
+        {
+            civData.getKeyFromCiv(civ)
+        }
     }
 
     fun getCivKeys():List<String> {
-        return civData.getKeyCivs()
+        return civData.getKeyCivs() + GRAL_CIV
     }
 
     fun getCivNamesLocalLang():List<String> {

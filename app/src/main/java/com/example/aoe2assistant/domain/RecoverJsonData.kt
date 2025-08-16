@@ -119,7 +119,7 @@ class readFromJson{
     }
 }
 
-
+/*
 @Composable
 fun recoverJsonData(civData: CivData, langList: List<String>) : HashMap<String, Pair<Boolean, String>> {
 
@@ -156,7 +156,7 @@ fun recoverJsonData(civData: CivData, langList: List<String>) : HashMap<String, 
     }
     return langAvailables
 }
-
+*/
 
 fun fromRawToListCiv(rawInfo: List<RawCivInfo>, civData: CivData, lang: String){
     val rawFields = civData.getRawFields()

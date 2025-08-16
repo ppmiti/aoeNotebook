@@ -46,6 +46,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.example.aoe2assistant.DEFAULT_LANGUAGE
 import com.example.aoe2assistant.LocalOrchestrator
 import com.example.aoe2assistant.LocalVoice
 import com.example.aoe2assistant.R
@@ -127,6 +128,7 @@ fun CivsListContent(civsList: List<String>,
 
     var iExpanded by remember{ mutableStateOf(false) }
     var langChosen by remember{ mutableStateOf(localOrch.resources.getLocalLanguage()) }
+    langChosen = DEFAULT_LANGUAGE
 
     localOrch.writeNotes(notesData)
 
@@ -198,6 +200,7 @@ fun CivsListContent(civsList: List<String>,
                                 fontFamily = medievalFont.fontFamily)
 
                             // language choice
+                            /*
                             Box {  // box to create drop down menu
 
 
@@ -243,7 +246,7 @@ fun CivsListContent(civsList: List<String>,
                                 }
 
                             }
-
+                            */
 
                             // opponent's civ choice
 
